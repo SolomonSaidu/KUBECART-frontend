@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-page text-ink antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background: rgba(255, 107, 53, 0.22);
+  }
+
+  :focus-visible {
+    outline: 2px solid #ff6b35;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply mx-auto w-full max-w-page px-4 sm:px-5;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm font-semibold text-ink;
+  }
+
+  .field-input {
+    @apply w-full rounded-xl border border-line bg-[#fbfcfe] px-4 py-3 text-ink placeholder:text-muted/70 transition focus:border-accent focus:bg-white focus:outline-none focus:ring-4 focus:ring-accent/10 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .field-error {
+    @apply mt-1.5 text-sm font-medium text-red-600;
+  }
+
+  .panel {
+    @apply rounded-3xl border border-line bg-panel shadow-soft;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full bg-accent/10 px-3 py-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-accent;
+  }
+
+  .eyebrow-dark {
+    @apply inline-flex items-center rounded-full bg-deep/[0.06] px-3 py-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-ink;
+  }
+
+  .skeleton {
+    @apply animate-pulse bg-slate-200/80;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
