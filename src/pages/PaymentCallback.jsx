@@ -267,6 +267,13 @@ export default function PaymentCallbackPage() {
             </span>
           </div>
         )}
+
+        <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-relaxed text-muted">
+          Need further enquiries? Contact us:{" "}
+          <a href="tel:+2348167263662" className="font-semibold text-ink hover:text-accent">
+            +234 8167263662
+          </a>
+        </p>
       </div>
     </main>
   );
