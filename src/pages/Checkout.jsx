@@ -312,9 +312,20 @@ export default function CheckoutPage() {
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div>
                       <span className="eyebrow-dark">Payment</span>
-                      <h2 className="mt-3 text-2xl font-extrabold tracking-tight">
-                        Pay with Paystack
-                      </h2>
+                      <div className="mt-3 flex flex-wrap items-center gap-3">
+                        <h2 className="text-2xl font-extrabold tracking-tight">
+                          Pay with Paystack
+                        </h2>
+                        <span className="inline-flex shrink-0 items-center rounded-lg bg-deep px-2.5 py-1.5">
+                          <img
+                            src="/paystack-logo.svg"
+                            alt="Paystack"
+                            width="140"
+                            height="25"
+                            className="h-4 w-auto"
+                          />
+                        </span>
+                      </div>
                     </div>
                     <Badge tone="green">Secure</Badge>
                   </div>
