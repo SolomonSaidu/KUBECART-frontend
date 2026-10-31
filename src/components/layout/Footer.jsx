@@ -17,6 +17,22 @@ export default function Footer() {
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/65">
             Shop smarter with premium essentials for home, tech, fashion, and everyday life.
           </p>
+          <div className="mt-5 flex items-center gap-3">
+            <span className="grid shrink-0 place-items-center rounded-xl bg-white p-1.5">
+              <img
+                src="/DynaTechMinds-320x200.png"
+                alt="Dyna Tech Minds"
+                width="320"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                className="h-12 w-auto"
+              />
+            </span>
+            <span className="text-xs leading-relaxed text-white/50">
+              A product of <span className="font-semibold text-white/75">Dyna Tech Minds</span>
+            </span>
+          </div>
         </div>
 
         <div>
